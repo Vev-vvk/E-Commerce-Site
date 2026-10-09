@@ -669,9 +669,6 @@ function loadCart() {
       }
 
     })
-
-
-
     div1.append(itemDiv)
   })
 
@@ -744,7 +741,7 @@ function updateCartItemQuantity(id,quantity){
       })
       setItem("cart",filterProducts);
       loadCart()
-
+updateCartCount();
 }
 
 loadCart()
