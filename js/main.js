@@ -147,10 +147,12 @@ if (categoryFilters) {
 if (searchInput) {
   searchInput.addEventListener("input", (e) => {
     e.stopPropagation();
-    let value = searchInput.value;
-
+    let value = searchInput.value.trim();
     const url = `https://dummyjson.com/products/search?q=${value}`
+    if(value){
     fetchProducts(url)
+    }
+    
   })
 }
 
